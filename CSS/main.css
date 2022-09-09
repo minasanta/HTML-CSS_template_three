@@ -689,6 +689,106 @@ header .mega-menu .links li a i {
     line-height: 1.7;
 }
 /* End testimonials */
+
+/* Start team */
+#team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    gap: 40px;
+}
+
+#team .box {
+    position: relative;
+}
+
+#team .box::before,
+#team .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: var(--main-transition-time);
+}
+
+#team .box::before {
+    background-color: #f3f3f3;
+    width: calc(100% - 60px);
+    z-index: -2;
+}
+
+#team .box::after {
+    background-color: #e4e4e4;
+    z-index: -1;
+    width: 0;
+}
+
+#team .box:hover::after {
+    width: calc(100% - 60px);
+}
+
+#team .box .data {
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#team .box .data img {
+    width: calc(100% - 60px);
+    border-radius: 10px;
+    transition: var(--main-transition-time);
+}
+
+#team .box:hover .data img {
+    filter: grayscale(100%);
+}
+
+#team .box .data .social {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#team .box .data .social a {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#team .box .data .social a i {
+    color: #777;
+    transition: var(--main-transition-time);
+}
+
+#team .box .data .social a:hover i {
+    color: var(--main-color);
+}
+
+#team .box .info {
+    padding-left: 80px;
+}
+
+#team .box .info h3 {
+    margin-bottom: 0;
+    color: var(--main-color);
+    font-size: 22px;
+    transition: var(--main-transition-time);
+}
+
+#team .box .info p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #777;
+}
+
+#team .box:hover .info h3{
+    color: #777;
+}
+
+/* End team */
 /* Start animation */
 @keyframes up-and-down {
     0%,100% {
