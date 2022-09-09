@@ -10,8 +10,8 @@ A tepmlate is Free Kasper - PSD from Osama EL-Zero
 - CSS
 - JavaScript
 - Libraries:
- - Font Awesome Free v5.15.3
- - Normalize.css v8.0.1
+  - Font Awesome Free v5.15.3
+  - Normalize.css v8.0.1
 
 ## What I learned new
 
