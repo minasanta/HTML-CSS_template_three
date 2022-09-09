@@ -32,6 +32,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -787,8 +791,170 @@ header .mega-menu .links li a i {
 #team .box:hover .info h3{
     color: #777;
 }
-
 /* End team */
+/* Start services */
+#services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 40px;
+}
+#services .box {
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    transition: var(--main-transition-time);
+    position: relative;
+    counter-increment: count;
+}
+#services .box::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0;
+    background-color: var(--main-color);
+    transition: var(--main-transition-time);
+}
+#services .box:hover {
+    transform: translateY(-10px);
+}
+#services .box:hover::before {
+    width: 100%;
+}
+#services .box i {
+    text-align: center;
+    margin: 30px auto 20px;
+    display: block;
+    color: #ccc;
+}
+#services .box h3 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 25px;
+    margin: 20px auto 30px;
+}
+#services .box .info{
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: right;
+    position: relative;
+}
+#services .box .info::before {
+    content: "0" counter(count);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 80px;
+    background-color: var(--main-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#services .box .info::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 100%;
+    top: 0px;
+    left: 67px;
+    background-color: #ccc;
+    transform: skewX(-22deg);
+}
+#services .box .info a{
+    color: var(--main-color);
+}
+/* End services */
+/* Start skills */
+#our-skills .container {
+    display: flex;
+    align-items: center;
+}
+#our-skills .skills {
+    flex: 1;
+}
+#our-skills .skill>h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#our-skills .skill>h3>span {
+    font-size: 12px;
+    color: var(--main-color);
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+#our-skills .skill .the-progress {
+    height: 30px;
+    background-color: #e6e6e6;
+    position: relative;
+}
+#our-skills .skill .the-progress span{
+    background-color: var(--main-color);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* End skills */
+/* Start work */
+#work-steps .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#work-steps img.image {
+    margin-right: 100px;
+}
+#work-steps .box {
+    background-color: #f6f5f5;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    position: relative;
+    z-index: 1;
+}
+#work-steps .box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    z-index: -1;
+    background-color: #ededed;
+    transition: var(--main-transition-time);
+}
+#work-steps .box:hover::before {
+    width: 100%;
+    height: 100%;
+}
+#work-steps .box img {
+    width: 64px;
+    margin-right: 20px;
+}
+#work-steps .box .text h3 {
+    margin: 0;
+    font-size: 22px;
+}
+#work-steps .box .text p {
+    color: #777;
+    line-height: 1.7;
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+/* End work */
 /* Start animation */
 @keyframes up-and-down {
     0%,100% {
