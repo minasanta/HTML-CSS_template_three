@@ -875,8 +875,18 @@ header .mega-menu .links li a i {
     display: flex;
     align-items: center;
 }
+@media (max-width: 767px) {
+    #our-skills .container {
+        flex-direction: column;
+    }
+}
 #our-skills .skills {
     flex: 1;
+}
+@media (max-width: 767px) {
+    #our-skills .skills {
+        width: 100%;
+    }
 }
 #our-skills .skill>h3 {
     display: flex;
@@ -912,6 +922,11 @@ header .mega-menu .links li a i {
 
 #work-steps img.image {
     margin-right: 100px;
+}
+@media (max-width: 767px) {
+    #work-steps img.image {
+        display: none;
+    }
 }
 #work-steps .box {
     background-color: #f6f5f5;
@@ -955,6 +970,374 @@ header .mega-menu .links li a i {
     margin: 10px 0 0;
 }
 /* End work */
+/* Start events */
+#events .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+#events .container img {
+    max-width: 450px;
+}
+@media (max-width: 767px) {
+    #events .container img {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+#events .info {
+    flex: 1;
+}
+#events .info .time {
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#events .info .time .unit {
+    width: 75px;
+    text-align: center;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px;
+    transition: var(--main-transition-time);
+}
+#events .info .time .unit:hover {
+    border-color: var(--main-color);
+}
+#events .info .time .unit span:first-child {
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 15px;
+    color: var(--main-color);
+    border-bottom: 1px solid #d4d4d4;
+    transition: var(--main-transition-time);
+}
+#events .info .time .unit span:first-child:hover {
+    border-color: var(--main-color);
+}
+#events .info .time .unit span:last-child {
+    display: block;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+#events .info h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 30px 0 0;
+}
+#events .info p {
+    margin: 30px auto 0;
+    text-align: center;
+    line-height: 1.7;
+    color: #777;
+    font-size: 19px;
+}
+#events .subscribe {
+    width: 100%;
+    margin-top: 80px;
+}
+#events form {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f5f5;
+    padding: 30px 40px;
+    border-radius: 50px;
+}
+
+@media (max-width: 767px) {
+    #events form {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0;
+    }
+}
+#events .subscribe input[type="email"] {
+    flex: 1;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    caret-color: var(--main-color);
+}
+@media (max-width: 767px) {
+    #events .subscribe input[type="email"] {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+#events .subscribe input[type="email"]:focus {
+    outline: none;
+}
+#events .subscribe input[type="email"]::placeholder {
+    transition: var(--main-transition-time);
+}
+#events .subscribe input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+#events .subscribe input[type="submit"] {
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: var(--main-transition-time);
+}
+@media (max-width: 767px) {
+    #events .subscribe input[type="submit"] {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+#events .subscribe input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+/* End events */
+/* Start pricing */
+#pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+#pricing .box {
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+#pricing .box::before,
+#pricing .box::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #f6f6f6;
+    transition: var(--main-transition-time);
+    z-index: -1;
+}
+#pricing .box:hover::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+#pricing .box:hover::after {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+}
+@media (min-width: 1200px) {
+    #pricing .box:nth-child(2) {
+        top: -20px;
+    }
+}
+#pricing .box .label {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: var(--main-color);
+    color: white;
+    writing-mode: vertical-lr;
+    padding: 5px 5px 20px 5px;
+}
+#pricing .box .label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 14px;
+    border-color: transparent transparent white transparent;
+}
+#pricing .box .title {
+    margin: 15px auto;
+    font-size: 25px;
+    font-weight: bold;
+}
+#pricing .box img {
+    width: 80px;
+}
+#pricing .box .price {
+    margin: 30px auto;
+}
+#pricing .box .amount {
+    color: var(--main-color);
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+}
+#pricing .box .time {
+    color: #777;
+}
+#pricing .box ul {
+    text-align: left;
+}
+#pricing .box ul li {
+    border-top: 1px solid #d4d4d4;
+    padding: 20px;
+}
+#pricing .box ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--main-color);
+
+}
+#pricing .box a {
+    display: block;
+    margin: 30px auto 40px;
+    color: var(--main-color);
+    font-weight: bold;
+    border: 2px solid var(--main-color);
+    width: fit-content;
+    padding: 15px 20px;
+    border-radius: 6px;
+    transition: var(--main-transition-time);
+}
+#pricing .box a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+/* End pricing */
+/* Start videos */
+#video .holder {
+    display: flex;
+    justify-content: center;
+    background-color: var(--section-background);
+    border: 1px solid #ddd;
+}
+@media (max-width: 991px) {
+    #video .holder {
+        flex-direction: column;
+    }
+}
+#video .holder .list {
+    min-width: 300px;
+    background-color: white;
+}
+#video .holder .list .name {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+#video .holder .list ul li {
+    padding: 20px;
+    border-top: 1px solid var(--section-background);
+    cursor: pointer;
+    transition: var(--main-transition-time);
+}
+#video .holder .list ul li:hover {
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+#video .holder .list ul li span {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+#video .holder .preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#video .holder .preview img {
+    max-width: 100%;
+    flex: 1;
+    position: relative;
+}
+#video .holder .preview .info {
+    background-color: #e4e4e4;
+    padding: 10px;
+    font-size: 20px;
+}
+/* End videos */
+/* Start stats */
+#stats {
+    background-image: url("../imgs/stats.jpg");
+    background-size: cover;
+    min-height: 300px;
+}
+#stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+#stats h2 {
+    font-weight: bold;
+    font-size: 40px;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
+}
+#stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 20px;
+    position: relative;
+}
+#stats .box {
+    background-color: white;
+    padding: 30px 15px;
+    text-align: center;
+    opacity: 0.65;
+    transition: var(--main-transition-time);
+    position: relative;
+}
+#stats .box:hover {
+    opacity: 1;
+}
+#stats .box::before,
+#stats .box::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 0;
+    height: 0;
+    transition: 0.8s;
+}
+#stats .box::before {
+    bottom: 0;
+    left: 0;
+}
+#stats .box::after {
+    top: 0;
+    right: 0;
+}
+#stats .box:hover::before,
+#stats .box:hover::after {
+    width: 3px;
+    height: 100%;
+}
+
+#stats .box .number {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#stats .box .text {
+    color: var(--main-color);
+    font-style: italic;
+    font-size: 20px;
+}
+/* End stats */
 /* Start animation */
 @keyframes up-and-down {
     0%,100% {
