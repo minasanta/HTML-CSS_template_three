@@ -16,3 +16,6 @@ A tepmlate is Free Kasper - PSD from Osama EL-Zero
 ## What I learned new
 
 - make a mega menu using CSS
+- use animation for making advacned shapes
+- use transition with before and after to make popular shapes in modern web pages
+- how to make separators between sections using shpaes >> resource : https://wweb.dev/resources/css-separator-generator/
