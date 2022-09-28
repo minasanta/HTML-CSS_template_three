@@ -932,12 +932,13 @@ header .mega-menu .links li a i {
     background-color: #e6e6e6;
     position: relative;
 }
-#our-skills .skill .the-progress span{
+#our-skills .skill .the-progress span {
     background-color: var(--main-color);
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    transition: width .5s linear;
 }
 /* End skills */
 /* Start work */
